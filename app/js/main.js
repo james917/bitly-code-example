@@ -22,8 +22,8 @@ $(document).ready(function(){
 
   function bitly_url(url) {
     var url = url;
-    var username="james917"; //USER_NAME
-    var key="R_b48d44ed363b4039b4d8cc879c6af2c8"; //API_KEY
+    var username=USER_NAME; //USER_NAME
+    var key=API_KEY; //API_KEY
 
     // ajax
     $.ajax({
