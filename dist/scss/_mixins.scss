@@ -1,0 +1,46 @@
+@import '_variables.scss';
+
+@mixin logo-size {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  margin-top: 12px;
+  display: block;
+}
+
+@mixin main-img {
+  height:600px;
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+}
+
+
+@mixin transparent {
+  background-color: transparent;
+  border-color:transparent;
+}
+
+@mixin transparent-important {
+  background-color: transparent !important;
+  border-color:transparent !important;
+}
+
+
+@mixin btn-padding {
+  padding-top: 20.4px !important;
+  padding-bottom: 20.4px !important;
+  padding-left: 28.8px !important;
+  padding-right: 28.8px !important;
+}
+
+
+@mixin box-shadow-input {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-width: 0;
+  box-shadow: 0 0 0 1px $white;
+  -webkit-appearance: none;
+}

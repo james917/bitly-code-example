@@ -1,0 +1,29 @@
+{
+  "name": "bitly-code-example",
+  "version": "0.0.1",
+  "description": "bitly code challenge",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james917/bitly-code-example.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "James Leone",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/james917/bitly-code-example/issues"
+  },
+  "homepage": "https://github.com/james917/bitly-code-example#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-webserver": "^0.9.1",
+    "jshint-stylish": "^2.2.1"
+  }
+}

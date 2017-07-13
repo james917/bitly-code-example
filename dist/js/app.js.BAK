@@ -1,0 +1,73 @@
+// (function(long_url,callback){
+//     bi = new URL("https://api-ssl.bitly.com/v3/shorten?");
+//     var params = [
+//         "login=jamesleone24@hotmail.com",
+//         "domain=j.mp",
+//         "apiKey= R_b48d44ed363b4039b4d8cc879c6af2c8",
+//         "longUrl="+ encodeURIComponent(long_url)
+//     ]
+//     bi.search = "?"+params.join('&')
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange=function () {
+//        if (xhr.readyState === 4) {
+//         if (xhr.status === 200) {
+//          var res = JSON.parse(xhr.responseText);
+//          callback(res["data"]["url"])
+//         } else {
+//           alert('There was a problem with the request.');
+//         }
+//       }
+//     }
+//     xhr.open("GET",bi.toString());
+//     xhr.send(null)
+//
+// })(location.href,function(a){prompt("", a);})
+
+$(document).ready(function()
+  {
+
+    function bit_url(url)
+    {
+    var url=url;
+    // var username="9lessons";
+    // var key="R_80e22b58d0af12730cdddd920dd86786";
+    var username="james917";
+    var key="R_b48d44ed363b4039b4d8cc879c6af2c8";
+
+    $.ajax({
+    url:"http://api.bit.ly/v3/shorten",
+    data:{longUrl:url,apiKey:key,login:username},
+    dataType:"jsonp",
+    success:function(v)
+    {
+    var bit_url=v.data.url;
+    console.log($("#result").html('<a href="'+bit_url+'" target="_blank">'+bit_url+'</a>'));
+    }
+  });
+}
+
+
+  $("#url").focus();
+
+  $("#short").click(function()
+  {
+  var url=$("#url").val();
+  var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  var urltest=urlRegex.test(url);
+  if(urltest)
+  {
+  $("#result").show();
+    bit_url(url);
+    $("#url").val('');
+    $("#url").focus();
+    console.log('it worked');
+  }
+  else
+  {
+  alert("Bad URL");
+  }
+  return false;
+});
+
+
+});

@@ -1,0 +1,192 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body {
+			background-color:$white !important;
+      font-family: $bitly-font;
+      font-weight: 300;
+      line-height: 20px;
+      color: #a3aaae;
+
+}
+
+
+// Logo Header
+.logo-header{
+  background-image: url('../images/logo.png');
+  @include logo-size;
+}
+
+.logo-header-orange{
+  background-image: url('../images/orange.png');
+  @include logo-size;
+}
+
+// navoverride
+
+.navbar {
+  min-height: 100px !important;
+}
+.navbar-nav > li > a {
+    line-height: 50px !important;
+}
+
+.navbar-white {
+    background-color:#fff;
+    border-bottom: 1px solid #eee;
+    .navbar-nav > li > a {
+        color:$orange;
+        text-transform: uppercase;
+    }
+}
+
+
+.navbar-inverse {
+  @include transparent-important;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+    color:$white !important;
+    text-transform: uppercase;
+
+}
+
+
+
+.starter-template {
+  padding: 140px 15px;
+  text-align: center;
+  color:$white;
+  h1 {
+      font-size: 48px;
+      line-height: 56px;
+      margin: 0 0 8px 0;
+      color:$white;
+      font-weight: 500;
+  }
+
+
+}
+
+.main {
+    background: url(../images/bg.png);
+    @include main-img;
+}
+
+.shortInput {
+  width: 60%;
+  height: 50px;
+  padding: 14.4px 23px;
+  font-family:$shorten;
+  font-size: 18px;
+  font-weight: 300;
+  color: #7f898e;
+  line-height: 32px;
+  @include box-shadow-input;
+  margin-top: 50px;
+}
+.btnShorten {
+  @include btn-padding;
+  font-size: 13px !important;
+  text-transform: uppercase;
+  line-height: 19.2px !important;
+  border-radius: 0 5px 5px 5px !important;
+  height: 53px;
+  color:$white !important;
+  background-color: $orange!important;
+  display: inline-block !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  margin: -3px 0 0 -123px;
+  border: solid 1px $orange !important;
+}
+
+::selection {
+    background:$orange;
+    color:$white;
+}
+
+
+
+.overviewHome {
+    margin-top:40px;
+    h2 {
+        color:$overview-header;
+        line-height: 40px;
+        font-size: 38px;
+        text-align:center;
+      }
+   p {
+     color:$overview-para;
+     font-size: 21px;
+     line-height: 29px;
+     margin-bottom: 60px;
+     text-align: center;
+     font-weight: 300;
+   }
+}
+
+
+
+.products {
+   h3{
+    text-align: center;
+    font-size: 21.12px;
+    line-height: 29.04px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $products-grey;
+  }
+  p{
+    text-align: center;
+    font-size: 15.6px;
+    line-height: 24px;
+    color: $products-grey;
+  }
+  span {
+    margin: 0 0 0 2.5em;
+    color: $products-grey;
+  }
+  .btn-default {
+      color:$orange;
+      background-color: $white;
+      border-color:transparent;
+  }
+  .btn-default:active,
+  .btn-default.active, .open >
+  .btn-default.dropdown-toggle {
+      color:$orange;
+      @include transparent;
+  }
+  .btn:active, .btn.active {
+      outline: 0;
+      background-image: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
+ .btn-default:hover {
+      color:$orange;
+      @include transparent;
+
+  }
+  .fa-long-arrow-right {
+      color:$orange;
+  }
+
+}
+
+
+
+#results {
+	background-color: $white;
+	width: 60%;
+	margin: 20px 0 0 320px;
+	padding: 40px;
+	a {
+		color:$orange;
+		font-weight:500;
+		// float:left;
+	}
+}
