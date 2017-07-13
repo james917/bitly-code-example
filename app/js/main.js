@@ -25,6 +25,7 @@ $(document).ready(function(){
     var username=USER_NAME; //USER_NAME
     var key=API_KEY; //API_KEY
 
+
     // ajax
     $.ajax({
       url:"http://api.bit.ly/v3/shorten",
